@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar" sourcepath="M2_REPO/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2.jar" sourcepath="M2_REPO/javax/servlet/jstl/1.2/jstl-1.2-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/sun/el/el-ri/1.0/el-ri-1.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-api/2.1.7/jsf-api-2.1.7.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-impl/2.1.7/jsf-impl-2.1.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/el-ri-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/hibernate-core-4.1.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/hibernate-entitymanager-4.1.7.Final.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jackson-core-asl-1.9.12.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jackson-mapper-asl-1.9.12.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jcl-over-slf4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jsf-api-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jsf-impl-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jsp-api-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/mysql-connector-java-5.1.18.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-aop-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-beans-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-context-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-core-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-expression-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-jdbc-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-orm-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-tx-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-web-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/JSF9-2-lib/spring-webmvc-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/jsf missing set/el-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/jsf missing set/jsp-api-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/local/external-lib/jsf missing set/servlet-api-2.5.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

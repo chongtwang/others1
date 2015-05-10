@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- table name, column is not case sensitive-->
+ <class name="hibernate.person.model.Person" table="PERSON">
+  <id column="ID" name="id">
+   <generator class="native"/>
+  </id>
+  <property column="name" generated="never" lazy="false"
+   name="name" type="string" update="false"/>
+   <property column="country" generated="never" lazy="false"
+   name="country" type="string" update="false"/>
+ </class>
+</hibernate-mapping>

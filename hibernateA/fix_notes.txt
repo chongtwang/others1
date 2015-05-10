@@ -1,0 +1,25 @@
+Reference project hibernateA.
+
+1. for cascaded save. Need to 
+	a.   Person.hbm.xml, <generator class="identity" />
+	b.	java test program. child need to set parent object:
+		donation.setPerson(person);
+	c.  change Person.hbm.xml from 
+		<generator class="assigned" />
+		to
+		<generator class="identity" />
+		See:
+		https://docs.jboss.org/hibernate/orm/3.3/reference/en-US/html/mapping.html
+		
+	d. 	add cascade="all" to the one-to-many relation in Person.hbm.xml
+	        <set name="donation" table="donation" inverse="true" lazy="true" fetch="select" cascade="all">
+	        
+2. cascaded data fetching works automatically. Get the person, person.getdonation works.	
+
+3. see testHibernateTransaction()in class SpringHibernateMain for:
+	 create, merge, save, update, save-update, delete, lock, refresh, evict, replicate
+	 
+4. see testQuery() in class SpringHibernateMain for 
+		//  binary comparison operators: =, >=, <=, <>, !=, like
+		// logical operations and, or, not 
+	 

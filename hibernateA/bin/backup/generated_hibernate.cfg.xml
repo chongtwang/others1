@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sakila</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+
+        <mapping resource="Customer.hbm.xml" />
+        <mapping resource="Staff.hbm.xml" />
+        <mapping resource="FilmCategory.hbm.xml" />
+        <mapping resource="Store.hbm.xml" />
+        <mapping resource="FilmList.hbm.xml" />
+        <mapping resource="ActorInfo.hbm.xml" />
+        <mapping resource="StaffList.hbm.xml" />
+        <mapping resource="Inventory.hbm.xml" />
+        <mapping resource="Country.hbm.xml" />
+        <mapping resource="SalesByStore.hbm.xml" />
+        <mapping resource="Payment.hbm.xml" />
+        <mapping resource="City.hbm.xml" />
+        <mapping resource="Category.hbm.xml" />
+        <mapping resource="Emp.hbm.xml" />
+        <mapping resource="SalesByFilmCategory.hbm.xml" />
+        <mapping resource="Actor.hbm.xml" />
+        <mapping resource="Donation.hbm.xml" />
+        <mapping resource="Address.hbm.xml" />
+        <mapping resource="NicerButSlowerFilmList.hbm.xml" />
+        <mapping resource="CustomerList.hbm.xml" />
+        <mapping resource="Rental.hbm.xml" />
+        <mapping resource="Refund.hbm.xml" />
+        <mapping resource="Language.hbm.xml" />
+        <mapping resource="FilmActor.hbm.xml" />
+        <mapping resource="Film.hbm.xml" />
+        <mapping resource="FilmText.hbm.xml" />
+        <mapping resource="Person.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.account.Account" table="customer">
+		<id name="ID" column="customer_id">
+			<generator class="native" />
+		</id>
+		<property name="creationDate" column="create_date" type="timestamp"
+			update="false" />
+		<property name="accountType" column="type" type="string"
+			update="false" />
+		<property name="balance" column="BALANCE" type="double" />
+	</class>
+</hibernate-mapping>

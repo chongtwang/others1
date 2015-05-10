@@ -1,0 +1,37 @@
+
+check AppTest->TransactionSynchronizationManager.isActualTransactionActive();
+-----------------------------------------------
+Note in PersonDAPImpl, 
+
+save() using @Transactional from Spring
+save2() doesn't use. 
+The 2 method have the same effect.
+This is prove of Spring transaction
+-----------------------------------------------
+This version tries to make Spring transaction annotation driven. But it doesn't work
+See:
+spring-context.xml
+SpringHibernateTest.java (@Transactional)
+PersonDAOImpl.java ( no need of session.beginTransaction() )
+But it works in NBA application
+
+usage:
+http://localhost:8080/helloworld/
+http://localhost:8080/helloworld/accounts
+http://localhost:8080/helloworld/hello
+http://localhost:8080/helloworld/model
+
+1. Demonstrated boostrap style, jquery auto complete and AJAX, Sping MVC, hibernate
+
+2. The Spring put the model data in request attribute after return from controller class.
+Debug in the targeted jsp, see variable->request->request->request->attributes
+See also:
+http://www.intertech.com/Blog/understanding-spring-mvc-model-and-session-attributes/
+
+3. session attributes can be seen in jsp debug pageContext->session->session->attributes->segments
+ 	either in controller:
+ 		session.setAttribute..
+ 		@SessionAttributes("sessionObj")
+ 	or in jsp:
+ 		<c:set var="salary" scope="session" value="${2000*2}" />
+ 

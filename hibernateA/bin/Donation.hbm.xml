@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2015 3:16:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="model">
+    <class name="Donation" table="donation2" catalog="sakila" optimistic-lock="version">
+        <id name="donationId" type="java.lang.Integer">
+            <column name="donation_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="person" class="Person" fetch="select">
+            <column name="customer_id" not-null="true" />
+        </many-to-one>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

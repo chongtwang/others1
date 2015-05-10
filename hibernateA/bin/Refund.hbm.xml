@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2015 11:58:04 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="model">
+    <class name="Refund" table="refund" catalog="sakila" optimistic-lock="version">
+        <id name="refundId" type="java.lang.Integer">
+            <column name="refund_id" />
+            <generator class="identity" />
+        </id>
+        <property name="customerId" type="java.lang.Short">
+            <column name="customer_id" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

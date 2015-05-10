@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="hibernate.person.model" table="person">
+  <id column="customer_id" name="ID">
+   <generator class="native"/>
+  </id>
+  <property column="create_date" generated="never" lazy="false"
+   name="creationDate" type="timestamp" update="false"/>
+  <property column="type" generated="never" lazy="false"
+   name="accountType" type="string" update="false"/>
+  <property column="BALANCE" generated="never" lazy="false"
+   name="balance" type="double"/>
+ </class>
+</hibernate-mapping>

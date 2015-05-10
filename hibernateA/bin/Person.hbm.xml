@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2015 3:16:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping package="model">
+    <class name="Person" table="person2" catalog="sakila" optimistic-lock="version">
+        <id name="customerId" type="short">
+            <column name="customer_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="20" not-null="true" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="20" />
+        </property>
+        <set name="donation" table="donation" inverse="true" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="customer_id"/>
+            </key>
+            <one-to-many class="Donation" />
+        </set>
+    </class>
+</hibernate-mapping>

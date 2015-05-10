@@ -1,0 +1,29 @@
+test url:
+http://localhost:8080/JSF_Spring_Hibernate/pages/index.jsf
+
+---------------------------------------------------------------------------
+Dealing with “java.lang.OutOfMemoryError: PermGen space” error
+See:
+http://stackoverflow.com/questions/88235/dealing-with-java-lang-outofmemoryerror-permgen-space-error
+http://www.mkyong.com/tomcat/tomcat-javalangoutofmemoryerror-permgen-space/
+
+Add file ${tomcat-folder}\bin\setenv.bat
+
+setenv.bat contents:
+set JAVA_OPTS=-Dfile.encoding=UTF-8 -Xms128m -Xmx1024m -XX:PermSize=64m -XX:MaxPermSize=256m
+
+-----------------------------------------------------------------------------
+use a strange lib of c3p0-0.9.1.2.jar for
+	<!-- Data Source Declaration -->
+	<bean id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />	
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/sakila" />	
+		<property name="user" value="root" />	
+		<property name="password" value="root" />	
+		<property name="maxPoolSize" value="10" />
+		<property name="maxStatements" value="0" />
+		<property name="minPoolSize" value="5" /> 
+	</bean>
+
+This doesn't work:
+    class="org.apache.commons.dbcp.BasicDataSource"

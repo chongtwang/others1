@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#test1.xhtml" PATH="/test1.xhtml"
+  SHAPE="112,80,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#test1.xhtml:0" NAME="item"
+   PATH="/test1.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="test2::#views#test2.xhtml" NAME="output"
+    PATH="/views/test2.xhtml" TARGET="rules:#views#test2.xhtml"
+    TITLE="test2" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#test2.xhtml" PATH="/views/test2.xhtml"
+  SHAPE="376,96,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

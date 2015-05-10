@@ -1,0 +1,5 @@
+test url:
+http://localhost:8080/JavaServerFaces/faces/hello.xhtml
+http://localhost:8080/JavaServerFaces/faces/welcome.xhtml
+http://localhost:8080/JavaServerFaces/faces/test1.xhtml
+http://localhost:8080/JavaServerFaces/faces/views/test2.xhtml

@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+     xmlns:h="http://java.sun.com/jsf/html"      
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.org/ui">  
+ <h:head>
+ <title>Welcome to OTV_JSF_Spring_Hibernate_Project</title>
+ 
+ <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="script/bootstrap.min.css" />
+
+	<script type="text/javascript" src="script/jquery.js"></script>
+
+	<script>
+/*
+$(document).ready(function() {
+	var table = $('#example').DataTable();
+
+	$('#example tbody').on( 'click', 'tr', function () {
+		$(this).toggleClass('selected');
+	} );
+
+	$('#button').click( function () {
+		alert( table.rows('.selected').data().length +' row(s) selected' );
+	} );
+	
+// the above referced to a custom lib
+    $('table tbody tr').click(function(){
+        alert($(this).text());
+    });
+
+	
+} );
+*/
+$(function(){
+	$("#example tr").click(function() {
+		var id = $(this).attr("id");
+		console.debug('rowindex', id);
+		$("#emp-id").text(id);
+		$("#for-id").text( "Employee ID is: " + $("#emp-id").text() );
+		
+		// select the row.
+		var name =  $(this).find("td").eq(1).html(); 
+		console.log(name);
+		$("#emp-name").val(name); // input text can only be changed by .val
+	});
+
+	$("#emp-add").click(function(){
+	
+		console.log("You click add!");
+//		alert("You click add!");
+	});
+	$("#emp-change").click(function(){
+	
+		console.log("You click change!");
+//		alert("You click change!");
+	});
+	
+})
+	</script>
+
+ 
+ </h:head>  
+ <h:body>
+ 		<div class="fw-body">
+			<div class="container">
+				<h2>Employee List</h2>
+
+				<table id="example" class="table table-striped">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</thead>
+
+
+					<tbody>
+						<tr  id="1">
+							<td>11</td>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>2011/04/25</td>
+							<td>$320,800</td>
+						</tr>
+						<tr  id="2">
+							<td>12</td>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>2011/07/25</td>
+							<td>$170,750</td>
+						</tr>
+						<tr  id="3">
+							<td>13</td>
+							<td>Ashton Cox</td>
+							<td>Junior Technical Author</td>
+							<td>San Francisco</td>
+							<td>2009/01/12</td>
+							<td>$86,000</td>
+						</tr>
+						<tr  id="4">
+							<td>14</td>
+							<td>Cedric Kelly</td>
+							<td>Senior Javascript Developer</td>
+							<td>Edinburgh</td>
+							<td>2012/03/29</td>
+							<td>$433,060</td>
+						</tr>
+						<tr  id="5">
+							<td>15</td>
+							<td>Airi Satou</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>2008/11/28</td>
+							<td>$162,700</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<div class="container">
+			<h2 id="for-id">Row ID</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div>
+						<input type="hidden" id="emp-id"></input>
+						<input type="text" id="emp-name" class="form-control"></input>
+					</div>
+
+				</div>
+				<div class="col-md-8">
+					<button class="btn btn-info btn-md" id="emp-change">Change</button>
+				</div>
+			</div>
+		</div>
+		<!--
+		<div class="container">
+			<h2 id="for-id">Add Employee</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<div>
+						<label for="name-add">Name:</label>
+						<input type="text" id="name-add" class="form-control" ></input>
+
+						<label for="Position-add">Position:</label>
+						<input type="text" id="Position-add" class="form-control" ></input>
+					</div>
+
+				</div>
+				<div class="col-md-8">
+					<button class="btn btn-info btn-md" id="emp-add">Add</button>
+				</div>
+			</div>
+		</div>
+		-->
+		</div>
+
+			<div class="container">
+			<h1 id="for-id">Add Person - This is real functionality</h1>
+
+     <h:form>      
+	     <table> 
+		     <tr>
+		     	<td><h:outputLabel for="id" value="Id : " /></td>
+		     	<td><p:inputText id="id" value="#{userMB.id}"  styleClass="form-control" >
+		     			<f:converter converterId="javax.faces.Integer"/>
+		     		    <p:ajax event="blur" update="idMsg" />
+		     		</p:inputText>
+		     		<p:message id="idMsg" for="id" display="icon"/> 
+		     	</td>
+		     </tr>
+		     <tr>
+		     	<td><h:outputLabel for="name" value="Name : " /></td>
+		     	<td><p:inputText id="name" value="#{userMB.name}"  styleClass="form-control" >
+		     			<f:validateLength minimum="1" /> 
+		     			<p:ajax event="blur" update="nameMsg" />
+		     		</p:inputText>
+		     		<p:message id="nameMsg" for="name" display="icon"/> 
+		     	</td>
+		     </tr>
+		     <tr>
+		     	<td><h:outputLabel for="surname" value="Surname : " /></td>   
+		     	<td><p:inputText id="surname" value="#{userMB.surname}"  styleClass="form-control" > 
+		     			<f:validateLength minimum="1" /> 
+		     			<p:ajax event="blur" update="surnameMsg" />  
+		     		</p:inputText>
+		     		<p:message id="surnameMsg" for="surname" display="icon"/> 
+		     	</td>    
+		     </tr>            
+	         <tr>
+		     	<td><p:commandButton id="addUser" value="Add" action="#{userMB.addUser}" ajax="false"   styleClass="btn btn-info btn-md" /></td>
+		     	<td><p:commandButton id="reset" value="Reset" action="#{userMB.reset}" ajax="false"  styleClass="btn btn-info btn-md" /></td>
+		     </tr>   
+	     </table>
+     </h:form> 
+		</div>
+
+</h:body>
+</html> 
